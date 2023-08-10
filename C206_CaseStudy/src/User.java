@@ -1,8 +1,27 @@
-
+<<<<<<< HEAD
 public class User extends Institution{
-	
+ 
+ private String role;
+ 
+ public User(String id, String name, String role) {
+  super(id, name);
+  this.role = role;
+ }
+
+ public String getRole() {
+  return role;
+ }
+
+ public void setRole(String role) {
+  this.role = role;
+ }
+ 
+} // end of class
+=======
+public class User extends Institution {
+
 	private String role;
-	
+
 	public User(String id, String name, String role) {
 		super(id, name);
 		this.role = role;
@@ -15,16 +34,17 @@ public class User extends Institution{
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
+
 	public void displayDetails() {
-		 super.displayDetails();
-		 System.out.println("Role : " + role);
+		super.displayDetails();
+		System.out.println("Role : " + role);
 	}
-	
+
 	public String toString() {
 		String output = super.toString();
 		output = String.format("%-31s %-20s", output, role);
 		return output;
 	}
-	
+
 } // end of class
+>>>>>>> branch 'master' of https://github.com/22009300-Timothy/C206_CaseStudy
