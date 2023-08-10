@@ -20,7 +20,7 @@ public class C206_CaseStudy {
 			option = Helper.readInt("Enter an option > ");
 			
 			if (option == 1) {
-
+				// Timothy
 				int detailType = 0;
 				
 				while (detailType != DETAIL_QUIT) {
