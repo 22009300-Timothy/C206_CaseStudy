@@ -15,4 +15,4 @@ public class Fees extends Institution{
         this.status = status;
     }
 
-} // end of class
+}

@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-public class User extends Institution{
- 
- private String role;
- 
- public User(String id, String name, String role) {
-  super(id, name);
-  this.role = role;
- }
 
- public String getRole() {
-  return role;
- }
-
- public void setRole(String role) {
-  this.role = role;
- }
- 
-} // end of class
-=======
 public class User extends Institution {
 
 	private String role;
@@ -47,4 +28,3 @@ public class User extends Institution {
 	}
 
 } // end of class
->>>>>>> branch 'master' of https://github.com/22009300-Timothy/C206_CaseStudy
