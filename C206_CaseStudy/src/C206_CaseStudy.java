@@ -5,15 +5,11 @@ public class C206_CaseStudy {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ArrayList<User> userList = new ArrayList<User>();
 
 		ArrayList<Student> studentList = new ArrayList<Student>();
 
-		userList.add(new User("U01", "G V Timothy", "Administrator"));
-		userList.add(new User("U02", "Toby Oh", "Administrator"));
-
-		studentList.add(new Student("S01", "G V Timothy", 12));
-		studentList.add(new Student("S02", "Toby Oh", 14));
+		studentList.add(new Student("S01", "G V Timothy", 12, "Pass", "22009300@myrp.edu.sg"));
+		studentList.add(new Student("S02", "Toby Oh", 14, "Pass", "22012924@myrp.edu.sg"));
 
 		int option = 0;
 
@@ -23,38 +19,7 @@ public class C206_CaseStudy {
 			option = Helper.readInt("Enter an option > ");
 
 			if (option == 1) {
-
-				int detailType = 0;
-
-				while (detailType != 4) {
-
-					C206_CaseStudy.setHeader("USERS");
-					C206_CaseStudy.setHeader("DETAIL TYPES");
-					System.out.println("1. Add a new user");
-					System.out.println("2. View all users");
-					System.out.println("3. Delete an existing user");
-					System.out.println("4. Quit");
-
-					detailType = Helper.readInt("\nEnter option to select detail type > ");
-
-					if (detailType == 1) {
-						// Add a a new user
-						User u = inputUser();
-						C206_CaseStudy.addUser(userList, u);
-					} else if (detailType == 2) {
-						// View all users
-						C206_CaseStudy.viewAllUser(userList);
-					} else if (detailType == 3) {
-						// Delete an existing user
-						String id = Helper.readString("Enter user id > ");
-						C206_CaseStudy.deleteUser(userList, id);
-					} else if (detailType == 4) {
-						System.out.println("Thank you!");
-					} else {
-						System.out.println("Invalid option");
-					}
-				}
-
+				// Timothy
 			} else if (option == 2) {
 				// Li Hua
 			} else if (option == 3) {
@@ -121,64 +86,6 @@ public class C206_CaseStudy {
 		Helper.line(80, "-");
 	}
 
-	// ================================= Option 1 Manage users
-	// =================================
-
-	public static User inputUser() {
-		String id = Helper.readString("Enter user id > ");
-		String name = Helper.readString("Enter name > ");
-		String role = Helper.readString("Enter role > ");
-
-		User u = new User(id, name, role);
-		return u;
-
-	}
-
-	public static void addUser(ArrayList<User> userList, User u) {
-		User detail;
-		for (int i = 0; i < userList.size(); i++) {
-			detail = userList.get(i);
-			if (detail.getId().equalsIgnoreCase(u.getId()))
-				return;
-		}
-		if ((u.getId().isEmpty()) || (u.getName().isEmpty())) {
-			System.out.println("User id or name cannot be empty");
-			return;
-		} else {
-			userList.add(u);
-			System.out.println("User added");
-		}
-	}
-
-	public static String retrieveAllUser(ArrayList<User> userList) {
-		String output = "";
-
-		for (int i = 0; i < userList.size(); i++) {
-			output += String.format("%-10s %-20s %-20s\n", userList.get(i).getId(), userList.get(i).getName(),
-					userList.get(i).getRole());
-		}
-		return output;
-	}
-
-	public static void viewAllUser(ArrayList<User> userList) {
-		C206_CaseStudy.setHeader("USER LIST");
-		String output = String.format("%-10s %-20s %-20s\n", "USER ID", "NAME", "ROLE");
-		output += retrieveAllUser(userList);
-		System.out.println(output);
-	}
-
-	public static void deleteUser(ArrayList<User> userList, String id) {
-		for (int i = 0; i < userList.size(); i++) {
-			User detail = userList.get(i);
-			if (detail.getId().equalsIgnoreCase(id)) {
-				userList.remove(i);
-				System.out.println("User deleted");
-				return;
-			}
-		}
-		System.out.println("User not found");
-	}
-
 	// ================================= Option 3 Manage students
 	// =================================
 
@@ -186,8 +93,10 @@ public class C206_CaseStudy {
 		String id = Helper.readString("Enter student id > ");
 		String name = Helper.readString("Enter name > ");
 		int age = Helper.readInt("Enter age > ");
+		String grade = Helper.readString("Enter grade > ");
+		String email = Helper.readString("Enter email address > ");
 
-		Student s = new Student(id, name, age);
+		Student s = new Student(id, name, age, grade, email);
 		return s;
 
 	}
@@ -212,15 +121,20 @@ public class C206_CaseStudy {
 		String output = "";
 
 		for (int i = 0; i < studentList.size(); i++) {
-			output += String.format("%-10s %-20s %-20d\n", studentList.get(i).getId(), studentList.get(i).getName(),
-					studentList.get(i).getAge());
+			String id = studentList.get(i).getId();
+			String name = studentList.get(i).getName();
+			int age = studentList.get(i).getAge();
+			String grade = studentList.get(i).getGrade();
+			String email = studentList.get(i).getEmail();
+			output += String.format("%-10s %-20s %-10d %-10s %-20s\n", id, name,
+					age, grade, email);
 		}
 		return output;
 	}
 
 	public static void viewAllStudent(ArrayList<Student> studentList) {
 		C206_CaseStudy.setHeader("STUDENT LIST");
-		String output = String.format("%-10s %-20s %-20s\n", "USER ID", "NAME", "AGE");
+		String output = String.format("%-10s %-20s %-10s %-10s %-20s\n", "USER ID", "NAME", "AGE", "GRADE", "EMAIL");
 		output += retrieveAllStudent(studentList);
 		System.out.println(output);
 	}
