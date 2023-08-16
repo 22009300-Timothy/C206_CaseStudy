@@ -35,5 +35,5 @@ public class Student extends Institution {
     public void setEmail(String email) {
       this.email = email;
     }
-      
+    
   } // end of class

@@ -41,5 +41,5 @@ public class User extends Institution {
 		output = String.format("%-31s %-20s", output, role);
 		return output;
 	}
-
+	
 } // end of class

@@ -29,5 +29,5 @@ public class Institution {
 		String output = String.format("%-10s %-20s", id, name);
 		return output;
 	}
-
+	
 } // end of class
