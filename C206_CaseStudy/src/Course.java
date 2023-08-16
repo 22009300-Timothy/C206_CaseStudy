@@ -25,5 +25,5 @@ public class Course extends Institution {
 	public void setSchedule(String schedule) {
 		this.schedule = schedule;
 	}
-
+	
 } // end of class

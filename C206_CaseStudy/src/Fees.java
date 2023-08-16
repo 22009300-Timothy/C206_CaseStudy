@@ -21,5 +21,4 @@ public class Fees extends Institution {
   public String getFeeType() {
     return FeeType;
   }
-  
 } // end of class

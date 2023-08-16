@@ -400,7 +400,7 @@ public class C206_CaseStudy {
 	
 	// 22045451 Li Hua
 	public static Course inputCourse() {
-		String id = Helper.readString("\nEnter user id > ");
+		String id = Helper.readString("\nEnter course id > ");
 		String name = Helper.readString("Enter name > ");
 		String instructor = Helper.readString("Enter instructor name > ");
 		String schedule = Helper.readString("Enter schedule > ");
@@ -515,7 +515,7 @@ public class C206_CaseStudy {
 	// 22031945 Jian Hong
 	public static void viewAllStudent(ArrayList<Student> studentList) {
 	    C206_CaseStudy.setHeader("STUDENT LIST");
-	    String output = String.format("%-10s %-20s %-10s %-10s %-20s\n", "USER ID", "NAME", "AGE", "GRADE", "EMAIL");
+	    String output = String.format("%-10s %-20s %-10s %-10s %-20s\n", "STUDENT ID", "NAME", "AGE", "GRADE", "EMAIL");
 	    output += retrieveAllStudent(studentList);
 	    System.out.println(output);
 	  }
@@ -597,7 +597,7 @@ public class C206_CaseStudy {
 	
 	// 22012942 Xavier
 	public static Enrolment inputEnrolment() {
-		String id = Helper.readString("\nEnter Enrolment id > ");
+		String id = Helper.readString("\nEnter enrolment id > ");
 		String name = Helper.readString("Enter name > ");
 		String courseName = Helper.readString("Enter Course name > ");    
 		String prerequisite = Helper.readString("Enter your level of study > ");
@@ -667,7 +667,7 @@ public class C206_CaseStudy {
 	
 	// 22012924 Toby
 	public static Attendance inputAttendance() {
-		String id = Helper.readString("\nEnter user id > ");
+		String id = Helper.readString("\nEnter attendance id > ");
 		String name = Helper.readString("Enter name > ");
 		String status = Helper.readString("Enter status > ");
 
@@ -705,7 +705,7 @@ public class C206_CaseStudy {
 	// 22012924 Toby
 	public static void viewAllAttendance(ArrayList<Attendance> attendanceList) {
 		C206_CaseStudy.setHeader("ATTENDANCE LIST");
-		String output = String.format("%-10s %-20s %-20s\n", "USER ID", "NAME",
+		String output = String.format("%-10s %-20s %-20s\n", "ATTENDANCE ID", "NAME",
 				"ATTENDANCE");
 		 output += retrieveAllAttendance(attendanceList);	
 		System.out.println(output);

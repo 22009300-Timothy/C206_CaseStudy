@@ -234,7 +234,7 @@ public class C206_CaseStudyTest {
 		// Test if Course list is not null and empty
 		assertNotNull("Test if there is valid Course arraylist to add to", courseList);
 		assertEquals("Test that the Course arraylist is empty.", 0, courseList.size());
-		// Attempt to retrieve the Users
+		// Attempt to retrieve the Courses
 		String allCourse= C206_CaseStudy.retrieveAllCourse(courseList);
 		String testOutput = "";
 		// Test if the output is empty
@@ -512,7 +512,7 @@ public class C206_CaseStudyTest {
 		C206_CaseStudy.addEnrolment(enrolmentList, e03);
 		// Test that the list is not empty
 		assertEquals("Test that Enrolment arraylist size is 3.", 3, enrolmentList.size());
-		// Attempt to retrieve the User
+		// Attempt to retrieve the Enrolment
 		allEnrolment= C206_CaseStudy.retrieveAllEnrolment(enrolmentList);
 		testOutput = String.format("%-20s %-20s %-20s %-20s %-20s\n","E01", "G V Timothy", "Science","GCE O-Level","11/04/2023");
 		testOutput += String.format("%-20s %-20s %-20s %-20s %-20s\n","E02", "Toby Oh", "Math","GCE N-Level","11/08/2023");
@@ -670,5 +670,5 @@ public class C206_CaseStudyTest {
 		a03 = null;
 		attendanceList = null;
 	}
-		
+	
 } // end of class
