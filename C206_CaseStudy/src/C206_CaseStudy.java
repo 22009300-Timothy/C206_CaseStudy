@@ -731,6 +731,6 @@ public class C206_CaseStudy {
 	        }
 	    }
 	    System.out.println("\nAttendance not found");
-	}	 
+	}	
 	
 } // end of class

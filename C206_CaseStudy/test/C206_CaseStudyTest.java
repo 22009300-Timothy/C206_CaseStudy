@@ -670,5 +670,5 @@ public class C206_CaseStudyTest {
 		a03 = null;
 		attendanceList = null;
 	}
-
+	
 } // end of class
