@@ -35,5 +35,4 @@ public class Enrolment extends Institution{
 	public void setEnrolmentDate(String enrolmentDate) {
 		this.enrolmentDate = enrolmentDate;
 	}
-
 } // end of class

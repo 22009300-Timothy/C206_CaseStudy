@@ -17,5 +17,4 @@ public class Attendance extends Institution {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
 } // end of class

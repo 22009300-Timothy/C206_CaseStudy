@@ -1,13 +1,23 @@
 import java.util.ArrayList;
 
 public class C206_CaseStudy {
-
+	
 	// 22009300 Timothy
 	private static final int OPTION_DELETE = 3;
 	private static final int OPTION_VIEW = 2;
 	private static final int OPTION_ADD = 1;
 	private static final int OPTION_QUIT = 7;
 	private static final int MAX_NUM_TRIES = 3;
+	
+	// 22045451 Li Hua
+	private static final int DELETE_COURSE = 3;
+	private static final int VIEW_COURSE = 2;
+	private static final int ADD_COURSE = 1;
+	
+	// 22031945 Jian Hong
+	private static final int DELETE_STUDENT = 3;
+	private static final int VIEW_STUDENT = 2;
+	private static final int ADD_STUDENT = 1;
 	
 	// 22024777 Ryan
 	private static final int QUIT_FEE = 4;
@@ -135,14 +145,14 @@ public class C206_CaseStudy {
 
 
 
-						if (detailType == 1) {
+						if (detailType == ADD_COURSE) {
 							// Add a a new course
 							Course c = inputCourse();
 							C206_CaseStudy.addCourse(courseList, c);
-						} else if (detailType == 2) {
+						} else if (detailType == VIEW_COURSE) {
 							// View all courses
 							C206_CaseStudy.viewAllCourse(courseList);
-						}  else if (detailType == 3) {
+						}  else if (detailType == DELETE_COURSE) {
 							// Delete an existing course
 							String id = Helper.readString("\nEnter course id > ");
 							C206_CaseStudy.deleteCourse(courseList, id);
@@ -167,14 +177,14 @@ public class C206_CaseStudy {
 
 						detailType = Helper.readInt("\nEnter option to select detail type > ");
 
-						if (detailType == 1) {
+						if (detailType == ADD_STUDENT) {
 							// Add a a new user
 							Student s = inputStudent();
 							C206_CaseStudy.addStudent(studentList, s);
-						} else if (detailType == 2) {
+						} else if (detailType == VIEW_STUDENT) {
 							// View all users
 							C206_CaseStudy.viewAllStudent(studentList);
-						} else if (detailType == 3) {
+						} else if (detailType == DELETE_STUDENT) {
 							// Delete an existing user
 							String id = Helper.readString("\nEnter student id > ");
 							C206_CaseStudy.deleteStudent(studentList, id);
@@ -721,6 +731,6 @@ public class C206_CaseStudy {
 	        }
 	    }
 	    System.out.println("\nAttendance not found");
-	}
-		 
+	}	 
+	
 } // end of class
