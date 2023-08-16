@@ -1,3 +1,4 @@
+// 22009300 Timothy
 public class Institution {
 
 	private String id;
@@ -22,11 +23,6 @@ public class Institution {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public void displayDetails() {
-		System.out.println("Id   : " + id);
-		System.out.println("Name : " + name);
 	}
 
 	public String toString() {
